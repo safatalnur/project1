@@ -1,0 +1,558 @@
+/* Fonts are downloaded from assets and converted using font transfonter */
+@font-face {
+    font-family: 'Raleway Light Italic';
+    src: url('fonts/Raleway-LightItalic.eot');
+    src: url('fonts/Raleway-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Raleway-LightItalic.woff2') format('woff2'),
+        url('fonts/Raleway-LightItalic.woff') format('woff'),
+        url('fonts/Raleway-LightItalic.ttf') format('truetype'),
+        url('fonts/Raleway-LightItalic.svg#Raleway-LightItalic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Raleway Italic';
+    src: url('fonts/Raleway-MediumItalic.eot');
+    src: url('fonts/Raleway-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Raleway-MediumItalic.woff2') format('woff2'),
+        url('fonts/Raleway-MediumItalic.woff') format('woff'),
+        url('fonts/Raleway-MediumItalic.ttf') format('truetype'),
+        url('fonts/Raleway-MediumItalic.svg#Raleway-MediumItalic') format('svg');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Raleway Light';
+    src: url('fonts/Raleway-Light.eot');
+    src: url('fonts/Raleway-Light.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Raleway-Light.woff2') format('woff2'),
+        url('fonts/Raleway-Light.woff') format('woff'),
+        url('fonts/Raleway-Light.ttf') format('truetype'),
+        url('fonts/Raleway-Light.svg#Raleway-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('fonts/Raleway-Medium.eot');
+    src: url('fonts/Raleway-Medium.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Raleway-Medium.woff2') format('woff2'),
+        url('fonts/Raleway-Medium.woff') format('woff'),
+        url('fonts/Raleway-Medium.ttf') format('truetype'),
+        url('fonts/Raleway-Medium.svg#Raleway-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Playfair Display Bold Italic';
+    src: url('fonts/PlayfairDisplay-BoldItalic.eot');
+    src: url('fonts/PlayfairDisplay-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/PlayfairDisplay-BoldItalic.woff2') format('woff2'),
+        url('fonts/PlayfairDisplay-BoldItalic.woff') format('woff'),
+        url('fonts/PlayfairDisplay-BoldItalic.ttf') format('truetype'),
+        url('fonts/PlayfairDisplay-BoldItalic.svg#PlayfairDisplay-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Playfair Display Italic';
+    src: url('fonts/PlayfairDisplay-Italic.eot');
+    src: url('fonts/PlayfairDisplay-Italic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/PlayfairDisplay-Italic.woff2') format('woff2'),
+        url('fonts/PlayfairDisplay-Italic.woff') format('woff'),
+        url('fonts/PlayfairDisplay-Italic.ttf') format('truetype'),
+        url('fonts/PlayfairDisplay-Italic.svg#PlayfairDisplay-Italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('fonts/PlayfairDisplay-Regular.eot');
+    src: url('fonts/PlayfairDisplay-Regular.eot?#iefix') format('embedded-opentype'),
+        url('fonts/PlayfairDisplay-Regular.woff2') format('woff2'),
+        url('fonts/PlayfairDisplay-Regular.woff') format('woff'),
+        url('fonts/PlayfairDisplay-Regular.ttf') format('truetype'),
+        url('fonts/PlayfairDisplay-Regular.svg#PlayfairDisplay-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Playfair Display Bold';
+    src: url('fonts/PlayfairDisplay-Bold.eot');
+    src: url('fonts/PlayfairDisplay-Bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/PlayfairDisplay-Bold.woff2') format('woff2'),
+        url('fonts/PlayfairDisplay-Bold.woff') format('woff'),
+        url('fonts/PlayfairDisplay-Bold.ttf') format('truetype'),
+        url('fonts/PlayfairDisplay-Bold.svg#PlayfairDisplay-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Body part of the css */
+
+body {
+    font-family: raleway lite;
+    background: white;
+    font: #2d2d2d;
+    font-size: 14px;
+}
+/* Flex is used to organize the header portion which includes logo, shopping cart and 
+navigation bar */
+header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: auto;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+
+.logo {
+    width: 120px; 
+    height: 80px;
+    display: flex;
+    order: 0;
+    padding: 10px;
+   
+    justify-content: flex-start;
+}
+.cart {
+    width: 80px;
+    height: 40px;
+    display: flex;
+    justify-content: right;
+    order: 1;
+}
+/* Add to cart indications for how many item from featured section was added */
+#evolution {
+    color: white;
+    font-size: 80%;
+    background-color: red;
+    position: absolute;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    order: 2;
+    border: 1px solid #d7d7d7;
+}
+
+.nav-bar-list {
+    font-family: raleway medium; 
+    font-weight: 500;
+    display: flex;
+    flex: 1 0 100%;
+    margin-top; 40px;
+    justify-content: space-around;
+    padding: 20px;
+}
+/* Hover effect on navigation bar */
+.effect {
+    text-decoration: none;
+    color: #e2574c;
+}
+.effect:hover {
+    color: #b64036;
+    transition: width .3s;
+    text-decoration: underline #b64036;
+}
+.effect:visited {
+    color: #b64036;
+}
+/* sticky is use to hold the navigation bar on top even when scrolling down */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.banner {
+    height: 500px;
+    width: 100%;
+    background: url("../images/banner-girl.png") center bottom no-repeat,
+                url("../images/flower-bkgd.jpg") center;
+    background-size: contain , cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/* Banner css portion */
+
+.banner p:nth-child(1) {
+    font-size: 14px;
+    font-family: Raleway;
+    color: white;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.banner p:nth-child(3) {
+    font-size: 2.0em;
+    text-align: center;
+    font-family: Playfair Display;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+/* Description portion where <span> is used to separate two font style on same line */
+.craft {
+    height: 250px;
+    width: 100%;
+    background-color: white;
+    background-size: cover;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+}
+.craft h2 {
+    font-size: 2.5em;
+    font-family: playfair display Italic;
+    padding-bottom: 30px;
+}
+.craft h2 span {
+    font-family: playfair display bold;
+}
+.craft p {
+    font-size: 20px;
+    font-family: raleway; 
+}
+
+/* Flexbox is used to construct shop section of the webpage */
+.container1 {
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    
+}
+
+.box {
+    font-family: raleway;
+    color: white;
+    font-size: 1.5em;
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    flex: 1 1 auto;
+    margin: -5px;
+}
+
+.box>* {
+    flex: 1 1 auto;
+    margin: 5px;
+}
+
+.box div:nth-child(1) {
+    background: url(../images/mens-category.jpg) no-repeat center / cover;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    flex-basis: 100%;
+}
+
+.box div:nth-child(2) {
+    background: url(../images/trends-category.jpg) no-repeat center / cover;
+    display: flex;
+    flex-basis: 45%;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.box div:nth-child(3) {
+    background: url(../images/glasses-category.jpg) no-repeat center / cover;
+    display: flex;
+    background-size: cover;
+    flex-basis: 45%;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.box div:nth-child(4) {
+    background: url(../images/sale-category.jpg) no-repeat center / cover;
+    display: flex;
+    flex-basis: 45%;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.box div:nth-child(5) {
+    background: url(../images/bags-category.jpg) no-repeat center / cover;
+    display: flex;
+    flex-basis: 45%;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.box div:nth-child(6) {
+    background: url(../images/womens-category.jpg) no-repeat center / cover;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    flex-basis: 100%;
+}
+/* Again <span> is used to seprate two different font style on same line */
+.products h2{
+    margin: 40px;
+    text-align: center;
+    font-size: 2.5em;
+    font-family: playfair display Italic;
+}
+
+.products h2 span {
+    font-family: playfair display bold;
+}
+
+/* Flickity Starts here. It is used for horizontal scrolling of the featured section*/
+
+* { box-sizing: border-box; 
+    margin: 0px;  
+}
+
+body { font-family: raleway light};
+
+.carousel {
+  background: #EEE;
+}
+
+.carousel-cell {
+  width: auto;
+  height: 500px;
+  margin-right: 10px;
+  background: white;
+  border-radius: 5px;
+  counter-increment: gallery-cell;
+  text-align: center;
+  
+}
+
+.carousel-button {
+    border: 0px;
+    margin-top: 10px;
+    background-color: black;
+    border-radius: 15px;
+    color: white;
+    padding: 5px 10px 10px;
+}
+
+.carousel-cell h3 {
+    font-family: playfair display;
+    color: #e2574c;
+    margin: 10px;
+    font-size: 1.5em;
+}
+
+/* Sign part is to input email address */
+.sign-up {
+    height: 400px;
+    width: 100%;
+    margin: 10px 0;
+    background: url("../images/wave-bkgd.jpg") center bottom no-repeat;
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.sign-up h2 {
+    font-family: playfair display italic;
+    font-size: 2.0em;
+    padding: 60px;
+}
+.sign-up h2 span {
+    font-family: playfair display bold;
+}
+.sign-up p {
+    font-size: 14px;
+    line-height: 1.6;
+    font-family: raleway;
+    padding: 20px;
+}
+
+.input-email {
+    width: 350px;
+    height: 40px;
+    border: 0px;
+    border-radius: 15px;
+}
+input::placeholder {
+    font-family: raleway light;
+}
+.button {
+    margin-left: -105px;
+    width: 100px;
+    height: 38px;
+    border: 0px;
+    border-radius: 15px;
+    background-color: #e2574c;
+}
+
+/* Footer contains the contact info.  Font awesome is used to create social media links */
+footer {
+    width: 100%;
+    height: 300px;;
+    display: flex;
+    flex-direction: column;;
+    background-color: #242424;
+    justify-content: space-between;    
+}
+
+.address {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 40px;
+    color: white;
+}
+.address p {
+    font-family: Playfair Display;
+    padding: 10px;
+    color: white;
+}
+.address p a {
+    color: white;
+}
+.address p:nth-child(3) {
+    font-family: playfair display;
+    color: #969696;
+}
+.link {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+.link li {
+    color: white;
+    font-size: 14px;
+    padding: 10px;
+}
+.link-list {
+    display: none;
+}
+
+/* transition from mobile version to tablet and desktop version */
+@media (min-width: 600px) {
+
+body {
+    font-size: 16px;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-bar {
+    display: flex;
+    width: 50%;
+    order: 1;
+    border: 0;
+    justify-content: space-between;
+}
+
+.cart {
+    display: flex;
+    justify-content: end;
+    order: 2;
+    padding-right: 20px;
+}
+.logo {
+    display: flex;
+    justify-content: flex-start;
+    order: 0;
+    padding-left: 20px;
+}
+
+
+.container1 {
+    height: 500px;
+    width: 100%;
+}
+.box div:nth-child(1) {
+    flex-basis: 47%;
+    background: cover;
+}
+.box div:nth-child(2) {
+    flex-basis: 22%;
+    background: cover;
+}
+.box div:nth-child(3) {
+    flex-basis: 22%;
+    background: cover;
+}
+.box div:nth-child(4) {
+    flex-basis: 22%;
+    background: cover;
+}
+.box div:nth-child(5) {
+    flex-basis: 22%;
+    background: cover;
+}
+.box div:nth-child(6) {
+    flex-basis: 47%;
+    background: cover;
+}
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.address {
+    text-align: left;
+    align-items: flex-start;
+    margin-top: 0px;
+}
+.link {
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: center;
+    margin-bottom:  0px;
+}
+.link li {
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+}
+.link-list {
+    display: contents;
+}
+.link-list {
+    display: contents;
+} 
+
+@media (min-width: 1240px) {
+
+}
